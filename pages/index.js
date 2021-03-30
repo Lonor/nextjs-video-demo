@@ -16,7 +16,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  const description = "Blog talks about backend development.";
+  const description = "Demo blog site by Next.js";
   return (
     <Layout home>
       <Head>
