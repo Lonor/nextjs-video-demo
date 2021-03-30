@@ -8,12 +8,12 @@ date: '2020-03-30'
 Try to use the `<video>` tag in Markdown content:
 
 ```HTML
-<video controls width="100%">
+<video controls width="100%" playsinline>
     <source src="/videos/demo.mp4" type="video/mp4">
 </video>
 ```
 
-<video controls width="100%">
+<video controls width="100%" playsinline>
     <source src="/videos/demo.mp4" type="video/mp4">
 </video>
 
