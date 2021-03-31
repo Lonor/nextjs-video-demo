@@ -44,9 +44,24 @@ And it shows:
 
 ![video](/videos/demo.mp4)
 
-It works in Safari on iOS, but does not work in Chrome on Desktop now......
+It works in Safari on iOS, but does not work in Chrome on Desktop now...
 
-Nevertheless, when replaced the video source with one from other website,
+Then we use the `<picture>` way:
+
+```HTML
+<picture>
+    <source srcset="/videos/demo.mp4" type="video/mp4">
+    <img src="/images/demo.gif" alt="A gif">
+</picture>
+```
+
+<picture>
+    <source srcset="/videos/demo.mp4" type="video/mp4">
+    <img src="/images/demo.gif" alt="A gif">
+</picture>
+
+
+When replaced the video source with one from other website,
 
 ```HTML
 <video controls="true" width="100%" preload="metadata" playsinline>
@@ -58,6 +73,11 @@ Nevertheless, when replaced the video source with one from other website,
   <source src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_2mb.mp4" type="video/mp4" />
 </video>
 
-It does work fine in Safari on iOS. Weird. I'll try to figure it out.
+It does work fine in Safari on iOS and all browsers.
 
-[Help wanted](https://github.com/vercel/next.js/discussions/23552).
+So, two choice to cover it up when videos don't work in Safari on iOS:
+
+- use `<picture>` and also provide a fallback image
+- replace the video source that could be loaded in Safari on iOS
+
+So far, the real problem has not been solved thoroughly. [Help wanted](https://github.com/vercel/next.js/discussions/23552).
